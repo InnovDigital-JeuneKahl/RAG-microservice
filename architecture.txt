@@ -1,0 +1,14 @@
+┌─────────────┐    ┌─────────────┐    ┌──────────────┐    ┌─────────────┐
+│   INPUT     │    │ PROCESSING  │    │   STORAGE    │    │  RETRIEVAL  │
+│             │    │             │    │              │    │             │
+│Transcription│───►│Text Chunking│───►│Vector Store  │◄───│Query Engine │
+│   Metadata  │    │ Embeddings  │    │Metadata Store│    │    RAG      │
+└─────────────┘    └─────────────┘    └──────────────┘    └──────┬──────┘
+                                                                  │
+                                                                  ▼
+                                                           ┌─────────────┐
+                                                           │ GENERATION  │
+                                                           │             │
+                                                           │ Ollama LLMs │
+                                                           │ (Qwen/Gemma)│
+                                                           └─────────────┘
